@@ -1,6 +1,14 @@
-<h1>Seja Bem-vindo!</h1>
+<h1><%= I18n.t('hello')%></h1>
+
+<p>Idioma: <strong><%= I18n.t('actual_locale') %></strong></p>
+
+<p><%= link_to 'Português (BR)', root_path(locale: 'pt-BR') %></p>
+
+<p><%= link_to 'English', root_path(locale: 'en') %></p>
+
 <p><%= name_application %></p>
-<p><strong>Data: </strong><%= data_br(Date.today) %></p>
+
+<p><strong>Data: </strong><%= I18n.l(Date.today) %></p>
 
 <%= render "menu" %>
 
